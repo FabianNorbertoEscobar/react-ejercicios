@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Animaciones CSS</title>
+  <style>
+
+    @keyframes showUp {
+      from {
+        transform: scale(0.6);
+      }
+
+      to {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes latido {
+      0% {
+        transform: scale(1) translateX(0%);
+        opacity: 0.5;
+        background: purple;
+      }
+
+      100% {
+        transform: scale(0.5) translateX(100%);
+        opacity: 1;
+        background: orange;
+      }
+    }
+
+    @-webkit-keyframes latido {
+      0% {
+        transform: scale(1) translateX(0%);
+        opacity: 0.5;
+        background: purple;
+      }
+
+      100% {
+        transform: scale(0.5) translateX(100%);
+        opacity: 1;
+        background: orange;
+      }
+    }
+
+    @-moz-keyframes latido {
+      0% {
+        transform: scale(1) translateX(0%);
+        opacity: 0.5;
+        background: purple;
+      }
+
+      100% {
+        transform: scale(0.5) translateX(100%);
+        opacity: 1;
+        background: orange;
+      }
+    }
+
+    @-o-keyframes latido {
+      0% {
+        transform: scale(1) translateX(0%);
+        opacity: 0.5;
+        background: purple;
+      }
+
+      100% {
+        transform: scale(0.5) translateX(100%);
+        opacity: 1;
+        background: orange;
+      }
+    }
+  
+  
+    .ball {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: tomato;
+      /* animation: 1s latido ease 5; */
+      /* -webkit-animation: 1s latido ease 5;
+      -moz-animation: 1s latido ease 5;
+      -o-animation: 1s latido ease 5; */
+      animation-duration: 1s;
+      animation-name: latido;
+      animation-timing-function: ease;
+      animation-iteration-count: 1;
+      animation-delay: 100ms;
+      animation-direction: reverse;
+      animation-fill-mode: backwards;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="ball"></div>
+</body>
+</html>
